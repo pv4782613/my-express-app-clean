@@ -5,7 +5,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://resume-builder-bup5.onrender.com' }));
 app.use(express.json());
 
 // Initialize Gemini
