@@ -5,7 +5,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: 'https://resume-builder-bup5.onrender.com' }));
+app.use(cors({ origin: 'https://resume-builder-8606.onrender.com' }));
 app.use(express.json());
 
 // Initialize Gemini
@@ -28,6 +28,8 @@ app.post('/ChatGbt', async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+   console.log(`Server running on port ${PORT}`);
 });
